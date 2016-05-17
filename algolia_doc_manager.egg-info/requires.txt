@@ -1,0 +1,2 @@
+mongo-connector >= 2.3.0
+algoliasearch >= 1.5.4
