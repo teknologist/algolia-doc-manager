@@ -1,6 +1,5 @@
 LICENSE
 MANIFEST.in
-README.rst
 ez_setup.py
 setup.py
 algolia_doc_manager.egg-info/PKG-INFO

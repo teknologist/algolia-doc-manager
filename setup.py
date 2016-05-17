@@ -29,7 +29,7 @@ setup(name='algolia-doc-manager',
       author='eric taieb walch',
       author_email='teknologist@gmail.com',
       url='https://github.com/teknologist/algolia-doc-manager',
-      install_requires=['mongo-connector >= 2.3.0','algoliasearch >= 1.5.4'],
+      install_requires=['mongo-connector >= 2.3.0','algoliasearch >= 1.5.4','urllib3 >= 1.15.1'],
       packages=["mongo_connector", "mongo_connector.doc_managers"],
       license="Apache License, Version 2.0",
       classifiers=[
