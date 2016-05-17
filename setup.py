@@ -21,7 +21,7 @@ except IOError:
     long_description = None  # Install without README.rst
 
 setup(name='algolia-doc-manager',
-      version='0.1.0',
+      version='0.2.0',
       maintainer='teknologist',
       description='Algolia plugin for mongo-connector',
       long_description=long_description,
@@ -29,7 +29,7 @@ setup(name='algolia-doc-manager',
       author='eric taieb walch',
       author_email='teknologist@gmail.com',
       url='https://github.com/teknologist/algolia-doc-manager',
-      install_requires=['mongo-connector >= 2.3.0','algoliasearch >= 1.5.4','urllib3 >= 1.15.1'],
+      install_requires=['mongo-connector >= 2.3.0','algoliasearch >= 1.5.4','urllib3 >= 1.15.1',"requests>=2.5.1"],
       packages=["mongo_connector", "mongo_connector.doc_managers"],
       license="Apache License, Version 2.0",
       classifiers=[
