@@ -265,7 +265,7 @@ class DocManager(DocManagerBase):
         """
         with self.mutex:
             self.last_object_id = serialize(doc.get(self.unique_key)
-            filtered_doc, state = self.apply_filter(self.apply_remap(doc),self.attributes_filter)
+            filtered_doc, state = self.apply_filter(self.apply_remap(doc),self.attributes_filter))
             filtered_doc['objectID'] = self.last_object_id
 
             #if not state:  # delete in case of update
