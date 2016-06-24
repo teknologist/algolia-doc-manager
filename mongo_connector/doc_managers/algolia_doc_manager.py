@@ -264,7 +264,8 @@ class DocManager(DocManagerBase):
         """ Update or insert a document into Algolia
         """
         with self.mutex:
-            self.last_object_id = serialize(doc.get(self.unique_key))
+            # self.last_object_id = serialize(u(doc.pop("_id")))
+            self.last_object_id = serialize(doc[self.unique_key])
             filtered_doc, state = self.apply_filter(self.apply_remap(doc),self.attributes_filter)
             filtered_doc['objectID'] = self.last_object_id
 
@@ -319,7 +320,7 @@ class DocManager(DocManagerBase):
                     self.index.waitTask(res['taskID'])
         except (algoliasearch.AlgoliaException, urllib3.exceptions.MaxRetryError) as e:
             raise errors.OperationFailed(
-                "Could not connect to Algolia Search: %s" % e)
+                "Could not commit to Algolia Search: %s" % e)
 
     def run_auto_commit(self):
         """ Periodically commits to Algolia.
